@@ -1,0 +1,121 @@
+repo=bench-blackhole-render-shootout
+scenario=Blackhole Render Shootout / Real Blackhole Bench
+url_search=?mode=real-blackhole-bench
+captured_at=2026-05-20T15:36:26.894Z
+browser=Chromium 147.0.7727.15
+headless=true
+meta_scenario=blackhole-render-shootout-webgpu
+status=success
+
+[page-console]
+(none)
+
+[harness-logs]
+./reports/logs/10-blackhole-render-shootout-real-blackhole-bench.log
+
+[result-json]
+{
+  "meta": {
+    "repo": "bench-blackhole-render-shootout",
+    "commit": "7d8a355",
+    "timestamp": "2026-05-20T15:36:26.785Z",
+    "owner": "ai-webgpu-lab",
+    "track": "blackhole",
+    "scenario": "blackhole-render-shootout-webgpu",
+    "notes": "winner=raw-webgpu-raymarch; profiles=3; three-tsl-singularity:fps=59.75,p95=17.86,score=0.7848,raySteps=96,taa=true | raw-webgpu-raymarch:fps=69.31,p95=15.56,score=0.8439,raySteps=128,taa=false | webgl-postprocess-fallback:fps=50.8,p95=20.81,score=0.6715,raySteps=64,taa=true; realAdapter=fallback(Benchmark.Suite not available); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:36:26.894Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "10-blackhole-render-shootout-real-blackhole-bench",
+    "capture_url_search": "?mode=real-blackhole-bench"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu readiness path",
+      "required_features": [
+        "shader-f16",
+        "timestamp-query"
+      ],
+      "limits": {
+        "maxTextureDimension2D": 8192,
+        "maxBindGroups": 4
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "blackhole",
+    "name": "blackhole-render-shootout-benchmark",
+    "input_profile": "single-lensing-fixture-three-renderer-candidates",
+    "renderer": "raw-webgpu-raymarch",
+    "model_id": "raw-webgpu-raymarch",
+    "resolution": "960x540"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1509.4,
+      "init_ms": 35,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "graphics": {
+      "avg_fps": 69.31,
+      "p95_frametime_ms": 15.56,
+      "scene_load_ms": 35,
+      "resolution_scale": 0.74,
+      "ray_steps": 128,
+      "taa_enabled": false,
+      "visual_artifact_note": "fast raymarch profile with sharper photon ring aliasing"
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/10-blackhole-render-shootout-real-blackhole-bench.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/bench-blackhole-render-shootout/",
+    "benchmark_adapter": {
+      "id": "bench-blackhole-blackhole-render-shootout-214",
+      "label": "Blackhole render shootout bench (benchmark.js 2.1.4 + raw WebGPU)",
+      "status": "connected",
+      "isReal": true,
+      "version": "2.1.4",
+      "capabilities": [
+        "profile-comparison",
+        "winner-selection",
+        "real-benchmark",
+        "compute-dispatch",
+        "ray-step-budget"
+      ],
+      "benchmarkType": "blackhole-render-shootout",
+      "message": "Real benchmark adapter 'bench-blackhole-blackhole-render-shootout-214' is connected."
+    },
+    "screenshots": [
+      "./reports/screenshots/10-blackhole-render-shootout-real-blackhole-bench.png"
+    ]
+  }
+}
